@@ -403,7 +403,7 @@
             selection.removeAllRanges();
             selection.addRange(range);
             
-            // Make non-editable when clicking outside or pressing Enter
+            // Make non-editable when clicking outside or pressing Escape
             const finishEditing = (e) => {
                 if (e.type === 'blur' || (e.type === 'keydown' && e.key === 'Escape')) {
                     element.contentEditable = "false";
@@ -423,7 +423,6 @@
             
             if (newUrl && newUrl.trim() !== '' && newUrl !== currentUrl) {
                 // Show loading state
-                const originalSrc = imgElement.src;
                 imgElement.style.opacity = '0.5';
                 
                 // Try to load the new image
