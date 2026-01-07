@@ -403,7 +403,7 @@
             selection.removeAllRanges();
             selection.addRange(range);
             
-            // Make non-editable when clicking outside or pressing Escape
+            // Stop editing when user clicks outside or presses Escape
             const finishEditing = (e) => {
                 if (e.type === 'blur' || (e.type === 'keydown' && e.key === 'Escape')) {
                     element.contentEditable = "false";
